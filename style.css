@@ -35,10 +35,22 @@ body {
 
 header h1 {
   background: url("/assets/images/logo.png") no-repeat;
-  text-indent: -9999px;
-  height: 100px;
-  background-position: center;
-  background-size: 50%;
+  height: 0;
+  background-size: contain;
+  overflow: hidden;
+  padding-top: 40px;
+  margin: 0;
+  font-size: 30pt;
+}
+
+.topbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px;
+  border-bottom: 1px solid;
+  border-bottom-color: rgb(201, 200, 200);
+  margin-bottom: 18px;
 }
 
 .story img {
@@ -107,4 +119,10 @@ footer p {
 
 section a {
   font-size: 14px;
+}
+
+@media only screen and (max-width: 800px) {
+  .search-bar {
+    display: none;
+  }
 }
