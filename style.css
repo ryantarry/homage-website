@@ -8,11 +8,26 @@ html {
   box-sizing: inherit;
 }
 
+.topbar {
+  z-index: 11;
+  width: 100%;
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  padding: 0.75em 5.556%;
+  border-bottom: solid 1px #dcdcdc;
+  margin-bottom: 1.125em;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 body {
   background-color: white;
   font-family: "Source Sans Pro", sans-serif;
-  padding: 0 5.556% 1.5em;
-  color: #000;
+  max-width: 100%;
+  margin: 0;
 }
 
 .wrapper {
@@ -24,13 +39,30 @@ body {
 .story {
   display: flex;
   flex-direction: column;
+  margin: 0 0 18px 0;
+  padding: 0 0 18px 0;
 }
 
+.top-story {
+  border-bottom: 1px solid #dcdcdc;
+  margin-top: 130px;
+}
+
+.top-story .headline {
+  font-size: 24px;
+  color: black;
+  line-height: 31.992px;
+  font-weight: 700;
+}
 .headline {
-  font-weight: 900;
   font-size: 21px;
   color: black;
-  max-width: 90%;
+  line-height: 31.992px;
+  font-weight: 700;
+}
+
+main {
+  padding: 18px;
 }
 
 header h1 {
@@ -40,21 +72,11 @@ header h1 {
   overflow: hidden;
   padding-top: 40px;
   margin: 0;
-  font-size: 30pt;
-}
-
-.topbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 5px;
-  border-bottom: 1px solid;
-  border-bottom-color: rgb(201, 200, 200);
-  margin-bottom: 18px;
+  font-size: 34pt;
 }
 
 .story img {
-  max-width: 90%;
+  width: 100%;
   margin-top: 30px;
 }
 
@@ -65,9 +87,9 @@ section img {
 a,
 a:visited {
   text-decoration: none;
-  color: #000;
   font-weight: bold;
 }
+
 nav a:hover {
   color: #5cb7f6;
 }
@@ -77,11 +99,16 @@ footer {
 }
 .category {
   color: #f26722;
-  font-size: 7pt;
+  font-size: 12px;
   text-transform: uppercase;
   margin-top: 15px;
   margin-bottom: 10px;
-  /* margin-left: 2px;*/
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.category:hover {
+  text-decoration: underline;
 }
 
 main p {
@@ -89,8 +116,8 @@ main p {
   text-transform: uppercase;
   margin-top: 0;
   font-size: 12px;
-  /*margin-left: 2px;*/
 }
+
 .social-media-icons {
   display: flex;
   justify-content: center;
@@ -121,8 +148,81 @@ section a {
   font-size: 14px;
 }
 
+/** Navbar **/
+
+nav {
+  display: none;
+}
+
+#hamburger-menu:checked ~ nav {
+  display: block;
+  margin-top: 72px;
+}
+
+label {
+  background-color: #f6f6f6;
+  padding-right: 20px;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+#search-icon {
+  font-size: 1.3rem;
+}
+
+#hamburger-icon {
+  font-size: 1.6rem;
+}
+
+.topbar {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3) !important;
+  z-index: 10;
+}
+
+.widget-title {
+  transform: skew(-15deg, 0deg);
+  background: #33c5f3;
+  height: 20px;
+  width: 98%;
+  top: calc(50% - 35.5%);
+  text-transform: uppercase;
+  z-index: 0;
+  color: #33c5f3;
+}
+
+.widget-title span {
+  background-color: #fff;
+  font-size: 21px;
+  font-weight: 700;
+  word-spacing: 0px;
+  position: relative;
+  padding: 0px 20px 0px 0px;
+}
+
 @media only screen and (max-width: 800px) {
   .search-bar {
     display: none;
   }
+}
+
+aside {
+  font-size: 14px;
+}
+
+section div {
+  display: flex;
+  margin: 0 0 6px 0;
+  gap: 10px;
+  width: 100%;
+}
+
+section div img {
+  width: 40%;
+}
+
+section {
+  line-height: 24px;
+  display: block;
 }
