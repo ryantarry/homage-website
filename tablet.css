@@ -1,0 +1,15 @@
+.secondary-articles {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 25px;
+}
+
+.secondary-articles .headline {
+  font-size: 18px;
+  line-height: 23.994px;
+}
+
+.clickventures a {
+  text-decoration: none;
+  font-size: 18px;
+}

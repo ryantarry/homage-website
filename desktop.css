@@ -1,0 +1,13 @@
+.footwrapper {
+  display: block;
+  text-align: center;
+}
+
+.footwrapper a {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+footer {
+  padding-top: 280px;
+}

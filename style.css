@@ -80,14 +80,27 @@ header h1 {
   margin-top: 30px;
 }
 
-section img {
-  width: 25%;
+.lifestyle img {
+  height: 136px;
+  width: 181px;
+  object-fit: cover;
+}
+
+.lifestyle div div {
+  display: block;
+}
+
+.clickventures img {
+  height: 150px;
+  width: 190px;
+  object-fit: cover;
 }
 
 a,
 a:visited {
   text-decoration: none;
   font-weight: bold;
+  color: black;
 }
 
 nav a:hover {
@@ -122,11 +135,11 @@ main p {
   display: flex;
   justify-content: center;
 }
-.social-media-icons i {
+header .social-media-icons i {
   margin: 10px;
   height: 24px;
 }
-.social-media-icons .twitter {
+header .social-media-icons .twitter {
   height: 16px;
 }
 .footwrapper {
@@ -137,6 +150,12 @@ main p {
 .footwrapper a {
   margin: 0px 0px 12px;
   font-weight: normal;
+  line-height: 24px;
+}
+
+footer i {
+  font-size: 20px;
+  padding: 0px 10px 50px 20px;
 }
 
 footer p {
@@ -150,7 +169,7 @@ section a {
 
 /** Navbar **/
 
-nav {
+header nav {
   display: none;
 }
 
@@ -160,7 +179,7 @@ nav {
 }
 
 label {
-  background-color: #f6f6f6;
+  background-color: #fff;
   padding-right: 20px;
 }
 
@@ -225,4 +244,8 @@ section div img {
 section {
   line-height: 24px;
   display: block;
+}
+
+footer {
+  padding-top: 105px;
 }
